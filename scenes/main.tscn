@@ -1,0 +1,182 @@
+[gd_scene format=3 uid="uid://du3vsofhwcl4k"]
+
+[ext_resource type="Script" uid="uid://c4s2jpr55n5j0" path="res://scripts/main.gd" id="1_o5qli"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6qx4q"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_g7b7a"]
+particle_flag_disable_z = true
+emission_shape_scale = Vector3(600, 10, 100)
+emission_shape = 3
+emission_box_extents = Vector3(1, 1, 1)
+direction = Vector3(0, 1, 0)
+spread = 15.0
+initial_velocity_min = 150.0
+initial_velocity_max = 150.0
+gravity = Vector3(0, 0, 0)
+scale_min = 5.0
+scale_max = 5.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sgp6g"]
+content_margin_left = 30.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.1, 0.1, 0.1, 0.6)
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 0.6)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0wfyh"]
+content_margin_left = 30.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.1, 0.1, 0.1, 0.3)
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 0.3)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o5qli"]
+content_margin_left = 30.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(1, 1, 1, 0.75)
+draw_center = false
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+
+[node name="Main" type="Control" unique_id=458948963]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_o5qli")
+
+[node name="background" type="Panel" parent="." unique_id=235995548]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_6qx4q")
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="background" unique_id=1998014462]
+position = Vector2(529, 0)
+amount = 32
+lifetime = 14.0
+process_material = SubResource("ParticleProcessMaterial_g7b7a")
+
+[node name="title" type="Label" parent="." unique_id=16506173]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.14305556
+anchor_top = 0.057291668
+anchor_right = 0.85694444
+anchor_bottom = 0.103125
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 64
+text = "Buscador de repositórios"
+metadata/_edit_use_anchors_ = true
+
+[node name="ScrollContainer" type="ScrollContainer" parent="." unique_id=931609961]
+custom_minimum_size = Vector2(930, 800)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.06944445
+anchor_top = 0.5208333
+anchor_right = 0.9305556
+anchor_bottom = 0.96875
+offset_top = 6.1035156e-05
+grow_horizontal = 2
+grow_vertical = 0
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer" unique_id=1946481227]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=993171554]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.083333336
+anchor_top = 0.140625
+anchor_right = 0.9166667
+anchor_bottom = 0.46666667
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 16
+metadata/_edit_use_anchors_ = true
+
+[node name="file name" type="LineEdit" parent="VBoxContainer" unique_id=792890267]
+custom_minimum_size = Vector2(900, 130)
+layout_mode = 2
+theme_override_font_sizes/font_size = 42
+theme_override_styles/normal = SubResource("StyleBoxFlat_sgp6g")
+theme_override_styles/read_only = SubResource("StyleBoxFlat_0wfyh")
+theme_override_styles/focus = SubResource("StyleBoxFlat_o5qli")
+placeholder_text = "Digite aqui o nome do arquivo (ex: oi)"
+metadata/_edit_use_anchors_ = true
+
+[node name="extension" type="LineEdit" parent="VBoxContainer" unique_id=1889147861]
+custom_minimum_size = Vector2(900, 130)
+layout_mode = 2
+theme_override_font_sizes/font_size = 42
+theme_override_styles/normal = SubResource("StyleBoxFlat_sgp6g")
+theme_override_styles/read_only = SubResource("StyleBoxFlat_0wfyh")
+theme_override_styles/focus = SubResource("StyleBoxFlat_o5qli")
+placeholder_text = "Digite aqui uma extensão (ex: .txt)"
+metadata/_edit_use_anchors_ = true
+
+[node name="token" type="LineEdit" parent="VBoxContainer" unique_id=1828782108]
+custom_minimum_size = Vector2(900, 130)
+layout_mode = 2
+theme_override_font_sizes/font_size = 42
+theme_override_styles/normal = SubResource("StyleBoxFlat_sgp6g")
+theme_override_styles/read_only = SubResource("StyleBoxFlat_0wfyh")
+theme_override_styles/focus = SubResource("StyleBoxFlat_o5qli")
+placeholder_text = "Github Token (PAT)"
+metadata/_edit_use_anchors_ = true
+
+[node name="search" type="Button" parent="VBoxContainer" unique_id=1712002321]
+custom_minimum_size = Vector2(900, 130)
+layout_mode = 2
+theme_override_font_sizes/font_size = 42
+text = "Buscar"
+
+[node name="observation" type="Label" parent="VBoxContainer" unique_id=440443635]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 0.39215687)
+theme_override_font_sizes/font_size = 30
+text = "O seu token não é salvo em nenhum lugar desse APP."
+
+[node name="HTTPRequest" type="HTTPRequest" parent="." unique_id=338645366]
+
+[connection signal="pressed" from="VBoxContainer/search" to="." method="_on_search_pressed"]
+[connection signal="request_completed" from="HTTPRequest" to="." method="_on_http_request_request_completed"]
