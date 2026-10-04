@@ -48,9 +48,17 @@ Mesmo assim, nunca compartilhe seu token ou coloque ele diretamente no código-f
 
 ---
 
+## 📥 Download
+
+Você pode baixar o APK mais recente na página de **Releases**.
+
+👉 **[Baixar APK](https://github.com/Riquelmy098/Liste-Repositorios/releases/tag/v1.0.0)**
+
+---
+
 🛠️ Feito com
 
-- 🎮 Godot
+- 🎮 Godot Mobile
 - 💻 GDScript
 - 🐙 GitHub API
 
