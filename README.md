@@ -1,4 +1,4 @@
-***🔎 GitHub Repository Finder***
+<h1>🔎 GitHub Repository Finder</h1>
 
 Um aplicativo simples feito para facilitar a busca por repositórios do GitHub usando apenas o nome ou a extensão de um arquivo.
 
