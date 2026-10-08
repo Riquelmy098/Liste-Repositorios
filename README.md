@@ -52,7 +52,7 @@ Mesmo assim, nunca compartilhe seu token ou coloque ele diretamente no código-f
 
 Você pode baixar o APK mais recente na página de **Releases**.
 
-👉 **[Baixar APK](https://github.com/Riquelmy098/Liste-Repositorios/releases/tag/v1.0.0)**
+👉 **[Baixar APK](https://github.com/Riquelmy098/Liste-Repositorios/releases/tag/v1.0.2)**
 
 ---
 
