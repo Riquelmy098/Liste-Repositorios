@@ -82,4 +82,4 @@ Os resultados da pesquisa dependem da API do GitHub, incluindo suas limitações
 
 ⭐ Gostou?
 
-Se esse projetinho foi útil para você, considere deixar uma ⭐ Star no repositório!
+Se esse projeto foi útil para você, considere deixar uma ⭐ Star no repositório!
